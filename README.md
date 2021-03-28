@@ -1,12 +1,11 @@
 # dcpp
 New C Preprocessor for Hi-Tech C Compiler v3.09
-New C Preprocessor for Hi-Tech C Compiler v3.09
 
-Introduction
+# Introduction
 
 When I started decompiling the preprocessor from the Hi-Tech C compiler package v3.09, I found that the error messages are completely identical to the messages of the program written by John F. Reiser {John F. Reiser}. So I assumed that the Hi-Tech C preprocessor is based on this program. This assumption turned out to be correct.
 
-Decompilation results
+# Decompilation results
 
 The C preprocessor, which is part of the Hi-Tech C compiler v3.09, uses the cpp.c program code written by John F. Raiser in July/August 1987. The Hi-Tech C preprocessor uses almost all the functions and variables of the source program.
 The source program has been adapted to process the C language source codes in CP/M encoding, in which each line ends with the characters CR and LF. To this end, the open, close, and read function calls were replaced with freopen, fopen, and the read function analog, which are compatible with similar UNIX functions.
@@ -56,7 +55,7 @@ In addition, the new preprocessor supports all the command-line options availabl
 
 As a result, the Hi-Tech C compiler v3. 09 for CP/M now has an alternative preprocessor that supports C++ - style comments, compatible with the original preprocessor of the compiler itself.
 
-For those who are interested
+# For those who are interested
 
 The code of the new preprocessor is presented based on the version of the program by J. Schilling in the file cpp_new. c. Executable file - cpp_new.com.
 The cpp_old.c file contains the restored code of the Hi-Tech C v3.09 preprocessor. It is compiled partially, and is not linked to the executable program. The recovered code contains C++ comments and compiles successfully using the new preprocessor. The cpp_old.asm file is the restored assembly code.
@@ -72,7 +71,7 @@ the resulting file is renamed to "cpy. c".
 
 The pperror, yyerror, and ppwarn functions have been changed, and they require the "vfprintf.c" function.
 
-Compiling the program
+# Compiling the program
 
 To compile a new preprocessor, you need to run the command
 
@@ -91,7 +90,7 @@ You may use this software for whatever you like, providing you ACKNOWLEDGE that 
 All copyrights to the algorithms used, binary code, trademarks, etc. belong to the legal owner - Microchip Technology Inc. and its subsidiaries. Commercial use and distribution of recreated source codes without permission from the copyright holderis strictly FORBIDDEN.
 
 
-Appreciation
+# Appreciation
 
 John F. Reiser for writing the preprocessor program.
 
