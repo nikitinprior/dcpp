@@ -81,7 +81,7 @@ or you can run the make command. In this case, in addition to the executable, a 
 
 The size of the executable program became 29 KB instead of 26 KB in the Hi-Tech C v3.09 compiler.
 
-Copyright
+# Copyright
 
 The Hi-Tech C compiler V3.09 is provided free of charge for any use, private or commercial, strictly as-is. No warranty or product support is offered or implied including merchantability, fitness for a particular purpose, or non-infringement. In no event will Hi-Tech Software or its corporate affiliates be liable for any direct or indirect damages.
 
