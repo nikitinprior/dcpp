@@ -3,7 +3,7 @@ New C Preprocessor for Hi-Tech C Compiler v3.09
 
 # Introduction
 
-When I started decompiling the preprocessor from the Hi-Tech C compiler package v3.09, I found that the error messages are completely identical to the messages of the program written by John F. Reiser {John F. Reiser}. So I assumed that the Hi-Tech C preprocessor is based on this program. This assumption turned out to be correct.
+When I started decompiling the preprocessor from the Hi-Tech C compiler package v3.09, I found that the error messages are completely identical to the messages of the program written by John F. Reiser. So I assumed that the Hi-Tech C preprocessor is based on this program. This assumption turned out to be correct.
 
 # Decompilation results
 
