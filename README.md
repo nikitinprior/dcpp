@@ -75,7 +75,7 @@ The pperror, yyerror, and ppwarn functions have been changed, and they require t
 
 To compile a new preprocessor, you need to run the command
 
-	zxc -o cpp_new.c spy.c vfprintf.c
+	zxc -o cpp_new.c spy.c vprintf.c
 
 or you can run the make command. In this case, in addition to the executable, a symbol file and a file with a program memory card will be created.
 
@@ -89,6 +89,10 @@ You may use this software for whatever you like, providing you ACKNOWLEDGE that 
 
 All copyrights to the algorithms used, binary code, trademarks, etc. belong to the legal owner - Microchip Technology Inc. and its subsidiaries. Commercial use and distribution of recreated source codes without permission from the copyright holderis strictly FORBIDDEN.
 
+# Changes in the program
+
+The source code of the preprocessor program contains code for processing the "#error message " directive. However, to activate it at the beginning of the program, you need to add the #define EXIT_ON_ERROR directive and change the storage class of the char ebuf[BUFFERSIZ] character array to static char ebuf[BUFFERSIZ]. After recompiling the program, the "#error message " directive will be activated. The necessary changes have been made to the source code of the program. Thanks to FredW for the comments made.
+26.06.2021
 
 # Appreciation
 
