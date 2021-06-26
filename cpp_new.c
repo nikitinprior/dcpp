@@ -1,5 +1,5 @@
 /* @(#)cpp.c	1.52 19/08/07 2010-2019 J. Schilling */
-
+#define	EXIT_ON_ERROR	/* added on 26.06.2021 */
 #define	SIGNED_HASH
 #define	UW
 
@@ -1115,7 +1115,7 @@ STATIC void control(register char *p) {
 	     */
 	    if (flslvl == 0) {
 /**/
-	        char ebuf[BUFFERSIZ];
+	        static char ebuf[BUFFERSIZ];	/* changed on 26.06.2021 */
 /**/
 	        p = ebuf;
 	        while (*inptr != '\n') {
