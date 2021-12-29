@@ -10,7 +10,6 @@ When I started decompiling the preprocessor from the Hi-Tech C compiler package 
 The C preprocessor, which is part of the Hi-Tech C compiler v3.09, uses the cpp.c program code written by John F. Raiser in July/August 1987. The Hi-Tech C preprocessor uses almost all the functions and variables of the source program.
 The source program has been adapted to process the C language source codes in CP/M encoding, in which each line ends with the characters CR and LF.  Hi-Tech has made the following changes:
 In the cotoken function, a case is added to the switch statement for characters with codes 1-9, 11-32, 35-37, 40-46, 58, 59, 63, 64, 91, 93, 94, 96 and 123. Code has been added to the main function for to handle the #asm and #endasm directives, and directives CPM and z80 are predefined.
-Some other features were changed, probably to make it more difficult to restore C code from a binary image, since these changes did not add new features.
 
 Unfortunately, the preprocessor version is Hi-Tech C, just like the original John F program. Reiser, do not support C++ - style comments.
 
