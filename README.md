@@ -13,7 +13,7 @@ In the cotoken function, a case is added to the switch statement for characters 
 
 Unfortunately, the preprocessor version is Hi-Tech C, just like the original John F program. Reiser, do not support C++ - style comments.
 
-Creating a new preprocessor
+# Creating a new preprocessor
 
 Fortunately, other programmers also made changes to the source code of the program, adding additional features to it.
 A new implementation of the preprocessor, based on the 1978 UNIX 32V release with permission from Caldera Inc., was written by J. Schilling. Its preprocessor version can handle C++ comments and adds some features.
@@ -55,7 +55,15 @@ As a result, the Hi-Tech C compiler v3. 09 for CP/M now has an alternative prepr
 # For those who are interested
 
 The code of the new preprocessor is presented based on the version of the program by J. Schilling in the file cpp_new. c. Executable file - cpp_new.com.
-The cpp_old.c file contains the restored code of the Hi-Tech C v3.09 preprocessor. It is compiled partially, and is not linked to the executable program. The recovered code contains C++ comments and compiles successfully using the new preprocessor. The cpp_old.asm file is the restored assembly code.
+The cppold.c, cpyold.c и yylexold.c files  contains the restored code of the Hi-Tech C v3.09 preprocessor. The cpp_old.asm file is the restored assembly code. 
+
+As a result, compilation using the command
+
+	zxc -o cppold.c cpyold.c
+
+produces an executable file cppold.com completely identical to the original.
+
+The recovered code contains C++ comments and compiles successfully using the new preprocessor. The cpp_old.asm file is the restored assembly code.
 
 As a result of the work done, I have received all the information I need and I do not want to waste time completely restoring the original source code of the Hi-Tech C v3.09 preprocessor.
 
