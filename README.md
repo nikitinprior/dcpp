@@ -97,7 +97,42 @@ All copyrights to the algorithms used, binary code, trademarks, etc. belong to t
 # Changes in the program
 
 The source code of the preprocessor program contains code for processing the "#error message " directive. However, to activate it at the beginning of the program, you need to add the #define EXIT_ON_ERROR directive and change the storage class of the char ebuf[BUFFERSIZ] character array to static char ebuf[BUFFERSIZ]. After recompiling the program, the "#error message " directive will be activated. The necessary changes have been made to the source code of the program. Thanks to FredW for the comments made.
+
 26.06.2021
+
+Managed to completely recreate the source code of the preprocessor, which generates a binary image of the executable program, completely identical to the original. Discovered two errors that may have been present in the source code of the Hi-Tech C preprocessor.
+- open1 and read1 are in fact standard libc fopen and fread
+- there is a minor bug in yylex tobinary causing wrong interpretation of hex literals (this bug is still present in J. Schilling's version), test code is:
+
+	#if (0x1f + 0x1f) == 42
+
+	int b = a;
+
+	#endif
+
+- there is another one in equdef causing spaces not being trimmed
+
+The files cpp_old.c, cpy_old.c, cpy_old.y and yylex_old.c contain changes necessary to compile the original version of the preprocessor program with errors of the authors to obtain binary compatibility. The text of the program contains notes about the necessary changes to eliminate these errors.
+File test.c. which confirms that there is a problem in both the original program and the new peprocessor.
+
+In addition, he noticed another error in the preprocessor from the Hi-Tech C v3.09 delivery:
+
+The following operators
+
+	#define xxx yyy
+	#include <xxx.h>
+
+lead to the replacement of xxx.h to yyyy.h, which does not comply with the C language standard.
+
+Thanks to his work, errors were found in the original preprocessor program, which migrated by inheritance to the new version.
+
+Source code can be compiled with the following command:
+
+zxc -o cpp_old.c cpy_old.c
+
+In the source code of the new preprocessor, these errors are temporarily not fixed.
+
+24.10.2021
 
 # Appreciation
 
