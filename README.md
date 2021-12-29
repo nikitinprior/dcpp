@@ -56,11 +56,11 @@ As a result, the Hi-Tech C compiler v3. 09 for CP/M now has an alternative prepr
 
 The code of the new preprocessor is presented based on the version of the program by J. Schilling in the file cpp_new. c. Executable file - cpp_new.com.
 
-The cppold.c, cpyold.c и yylexold.c files  contains the restored code of the Hi-Tech C v3.09 preprocessor. The cpp_old.asm file is the restored assembly code. 
+The cpp_old.c, cpy_old.c и yylexold.c files  contains the restored code of the Hi-Tech C v3.09 preprocessor. The cpp_old.asm file is the restored assembly code. 
 
 As a result, compilation using the command
 
-	zxc -o cppold.c cpyold.c
+	zxc -o cpp_old.c cpy_old.c
 
 produces an executable file cppold.com completely identical to the original.
 
