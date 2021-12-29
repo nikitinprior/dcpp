@@ -66,9 +66,8 @@ produces an executable file cppold.com completely identical to the original.
 
 The recovered code contains C++ comments and compiles successfully using the new preprocessor. The cpp_old.asm file is the restored assembly code.
 
-As a result of the work done, I have received all the information I need and I do not want to waste time completely restoring the original source code of the Hi-Tech C v3.09 preprocessor.
 
-Unfortunately, modern analogues of the yacc program generate other tables and code in the C language. To convert the file " cpy.y" I had to use the yacc program code from the old UNIX distribution, adapting it for CP/M.
+Unfortunately, modern analogues of the yacc program generate other tables and code in the C language. To convert the file "cpy.y" I had to use the yacc program code from the old UNIX distribution, adapting it for CP/M.
 The text of the program "cpy. c" was obtained using the yacc program using the code
 
 	yacc cpy.y
@@ -77,7 +76,7 @@ the resulting file is renamed to "cpy. c".
 
 The pperror, yyerror, and ppwarn functions have been changed, and they require the "vfprintf.c" function.
 
-# Compiling the program
+# Compiling new preprocessor
 
 To compile a new preprocessor, you need to run the command
 
