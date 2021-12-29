@@ -8,20 +8,18 @@ When I started decompiling the preprocessor from the Hi-Tech C compiler package 
 # Decompilation results
 
 The C preprocessor, which is part of the Hi-Tech C compiler v3.09, uses the cpp.c program code written by John F. Raiser in July/August 1987. The Hi-Tech C preprocessor uses almost all the functions and variables of the source program.
-The source program has been adapted to process the C language source codes in CP/M encoding, in which each line ends with the characters CR and LF. To this end, the open, close, and read function calls were replaced with freopen, fopen, and the read function analog, which are compatible with similar UNIX functions.
-Hi-Tech has made the following changes:
-In the cotoken function, a case is added to the switch statement for characters with codes 1-9, 11-32, 35-37, 40-46, 58, 59, 63, 64, 91, 93, 94, 96 and 123.
-The main function has been added to handle the #asm and #endasm directives, and CPM and z80 are pre-defined.
+The source program has been adapted to process the C language source codes in CP/M encoding, in which each line ends with the characters CR and LF.  Hi-Tech has made the following changes:
+In the cotoken function, a case is added to the switch statement for characters with codes 1-9, 11-32, 35-37, 40-46, 58, 59, 63, 64, 91, 93, 94, 96 and 123. Code has been added to the main function for to handle the #asm and #endasm directives, and directives CPM and z80 are predefined.
 Some other features were changed, probably to make it more difficult to restore C code from a binary image, since these changes did not add new features.
 
 Unfortunately, the preprocessor version is Hi-Tech C, just like the original John F program. Reiser, do not support C++ - style comments.
+
 Creating a new preprocessor
 
 Fortunately, other programmers also made changes to the source code of the program, adding additional features to it.
 A new implementation of the preprocessor, based on the 1978 UNIX 32V release with permission from Caldera Inc., was written by J. Schilling. Its preprocessor version can handle C++ comments and adds some features.
 
-Based on the fact that his version of the program is also based on the code of John F. I decided not to bother with restoring the code of the Hi-Tech C preprocessor, but to use the code of J. Schilling and adapt it to work under the CP/M operating system.
-Part of the code from the restored version of the preprocessor was added to the program text, turning it almost into a Hi-Tech C version, and part of the code with functions not needed in the CP/M version was excluded.
+Based on the fact that his version of the program is also based on the code of John F. I decided  use the code of J. Schilling and adapt it to work under the CP/M operating system. Part of the code from the restored original version of the preprocessor was added to the program text, turning it almost into a Hi-Tech C version, and part of the code with functions not needed in the CP/M version was excluded.
 
 Deleted options:
 
