@@ -124,11 +124,11 @@ The following operators
 
 lead to the replacement of xxx.h to yyyy.h, which does not comply with the C language standard.
 
-Errors were found in the original preprocessor program, which migrated by inheritance to the new version.
+Errors were found in the original preprocessor program, which were inherited by the new version.
 
 In the source code of the new preprocessor, these errors are temporarily not fixed.
 
-24.10.2021
+29.12.2021
 
 # Appreciation
 
